@@ -23,7 +23,7 @@ remotes::install_github("njahn82/bqschol")
 
 ## Initialize the connection
 
-Connect to dataset with Unpaywall snapshots
+Connect to dataset with Crossref metadata snapshots
 
 ``` r
 library(bqschol)
