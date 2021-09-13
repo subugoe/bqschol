@@ -7,7 +7,7 @@
 bgschol_execute(con = NULL, query = NULL)
 }
 \arguments{
-\item{con}{bgschol_con connection (\code{\link[=bgschol_con]{bgschol_con()}})}
+\item{con}{bgschol_con() object}
 
 \item{query}{SQL string}
 }
@@ -18,3 +18,10 @@ affected by the statement.
 \details{
 Wrapper for DBI::dbGetQuery
 }
+\seealso{
+Other tables: 
+\code{\link{bgschol_list}()},
+\code{\link{bgschol_query}()},
+\code{\link{bgschol_tbl}()}
+}
+\concept{tables}

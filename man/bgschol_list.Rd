@@ -7,7 +7,7 @@
 bgschol_list(con = NULL)
 }
 \arguments{
-\item{con}{bgschol_con connection (\code{\link[=bgschol_con]{bgschol_con()}})}
+\item{con}{bgschol_con() object}
 }
 \description{
 List of tables for big scholarly dataset.
@@ -19,4 +19,12 @@ my_con <- my_con <- bqschol::bgschol_con(dataset = "cr_history")
 # Get a list of tables
 bgschol_list(my_con)
 }
+
 }
+\seealso{
+Other tables: 
+\code{\link{bgschol_execute}()},
+\code{\link{bgschol_query}()},
+\code{\link{bgschol_tbl}()}
+}
+\concept{tables}

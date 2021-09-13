@@ -7,10 +7,17 @@
 bgschol_query(con = NULL, query = NULL)
 }
 \arguments{
-\item{con}{bgschol_con connection (\code{\link[=bgschol_con]{bgschol_con()}})}
+\item{con}{bgschol_con() object}
 
 \item{query}{SQL string}
 }
 \description{
 Wrapper for DBI::dbGetQuery
 }
+\seealso{
+Other tables: 
+\code{\link{bgschol_execute}()},
+\code{\link{bgschol_list}()},
+\code{\link{bgschol_tbl}()}
+}
+\concept{tables}

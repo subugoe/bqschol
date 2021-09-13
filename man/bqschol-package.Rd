@@ -4,10 +4,10 @@
 \name{bqschol-package}
 \alias{bqschol}
 \alias{bqschol-package}
-\title{bqschol: Access SUB Göttingen Big Scholarly Data}
+\title{bqschol: Access and analyse SUB Göttingen Big Scholarly Data}
 \description{
-Database client for SUB Göttingen Big Scholarly Data
-	stored on Google Big Query.
+Database-specific package for various big scholarly 
+    data on Google BigQuery curated at the SUB Göttingen.
 }
 \seealso{
 Useful links:
@@ -18,7 +18,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Najko Jahn \email{najko.jahn@sub.uni-goettingen.de} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Najko Jahn \email{najko.jahn@sub.uni-goettingen.de} (\href{https://orcid.org/0000-0001-5105-1463}{ORCID})
 
 }
 \keyword{internal}

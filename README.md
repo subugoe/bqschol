@@ -9,7 +9,7 @@
 The goal of bqschol is to provide an interface to SUB Göttingen’s big
 scholarly datasets stored on Google Big Query.
 
-This package is of internal use.
+This package is for internal use.
 
 ## Installation
 
@@ -32,7 +32,9 @@ my_con <- bqschol::bgschol_con(
   path = "~/hoad-private-key.json")
 ```
 
-You need to have a service account token to make use of this package!
+Ideally you have a service account token stored as in a json to make use
+of this package. If not available, your Google account credentials will
+be requeste dvia the web browser.
 
 ## Table functions
 
@@ -40,11 +42,11 @@ The package provides wrapper for the most common table operations
 
 -   `bgschol_list()`: List tables
 -   `bgschol_tbl()`: Access tables with
+    [https://dplyr.tidyverse.org/](dplyr)
 -   `bgschol_query()`: Perform of a SQL query and retrieve results
 -   `bgschol_execute()`: Execute a SQL query on the database
 
-Let’s start by listing all Crossref snapshots on SUB Göttingen’s Big
-Query project
+Let’s start by listing yearly Crossref historic snapshots.
 
 ``` r
 bgschol_list(my_con)
@@ -89,7 +91,7 @@ cc_query <- c("SELECT
   publisher,
   COUNT(DISTINCT(DOI)) AS n
 FROM
-  `api-project-764811344545.cr_history.cr_apr18`,
+  cr_apr18,
   UNNEST(license) AS license
 WHERE
   REGEXP_CONTAINS(license.URL, 'creativecommons')

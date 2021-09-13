@@ -1,0 +1,11 @@
+template:
+  package: subugoetheme
+reference:
+- title: Initialize
+  desc: Create connection
+- contents:
+  - has_concept("connection")
+- title: Access
+  desc: Access tables from a connection.
+- contents:
+  - has_concept("tables")

@@ -24,3 +24,4 @@ Authorization is only possible through a service account token.
 The toke can be requested from Najko
 \url{mailto:najko.jahn@sub.uni-goettingen.de}
 }
+\concept{connection}

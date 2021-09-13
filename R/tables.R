@@ -2,7 +2,7 @@
 #'
 #' List of tables for big scholarly dataset.
 #'
-#' @param con bgschol_con connection ([bgschol_con()])
+#' @template con
 #'
 #' @examples
 #' \dontrun{
@@ -11,6 +11,8 @@
 #' # Get a list of tables
 #' bgschol_list(my_con)
 #' }
+#'
+#' @family tables
 #' @export
 bgschol_list <- function(con = NULL) {
     stopifnot(DBI::dbIsValid(con))
@@ -22,7 +24,7 @@ bgschol_list <- function(con = NULL) {
 #' dplyr interface treats tables as if they are in-memory data frames.
 #' This enables accessing  big scholarly dataset without SQL.
 #'
-#' @param con bgschol_con connection ([bgschol_con()])
+#' @template con
 #' @param table Database table
 #' 
 #' @examples
@@ -37,6 +39,8 @@ bgschol_list <- function(con = NULL) {
 #'     # Compute query and download to local session
 #'     dplyr::collect()
 #'    }
+#' 
+#' @family tables
 #' @export
 bgschol_tbl <- function(con = NULL, table = NULL) {
     stopifnot(DBI::dbIsValid(con))
@@ -46,9 +50,9 @@ bgschol_tbl <- function(con = NULL, table = NULL) {
 #' 
 #' Wrapper for DBI::dbGetQuery
 #' 
-#' @param con bgschol_con connection ([bgschol_con()])
+#' @template con
 #' @param query SQL string
-#' 
+#' @family tables
 #' @export
 bgschol_query <- function(con = NULL, query = NULL) {
     stopifnot(DBI::dbIsValid(con))
@@ -61,9 +65,9 @@ bgschol_query <- function(con = NULL, query = NULL) {
 #'
 #' Wrapper for DBI::dbGetQuery
 #'
-#' @param con bgschol_con connection ([bgschol_con()])
+#' @template con
 #' @param query SQL string
-#'
+#' @family tables
 #' @export
 bgschol_execute <- function(con = NULL, query = NULL) {
     stopifnot(DBI::dbIsValid(con))

@@ -7,7 +7,7 @@
 bgschol_tbl(con = NULL, table = NULL)
 }
 \arguments{
-\item{con}{bgschol_con connection (\code{\link[=bgschol_con]{bgschol_con()}})}
+\item{con}{bgschol_con() object}
 
 \item{table}{Database table}
 }
@@ -27,4 +27,12 @@ cr_instant_df \%>\%
     # Compute query and download to local session
     dplyr::collect()
    }
+
 }
+\seealso{
+Other tables: 
+\code{\link{bgschol_execute}()},
+\code{\link{bgschol_list}()},
+\code{\link{bgschol_query}()}
+}
+\concept{tables}

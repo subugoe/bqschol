@@ -13,6 +13,8 @@
 #'  - *oadoi_full* Unpaywall metadata since 2008.
 #'
 #' @param path Path to JSON identifying the associated service account.
+#'
+#' @family connection
 #' @export
 bgschol_con <- function(dataset = "cr_instant", path = NULL) {
     # authorize through service account
