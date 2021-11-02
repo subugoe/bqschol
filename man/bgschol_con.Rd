@@ -4,24 +4,30 @@
 \alias{bgschol_con}
 \title{Create connection}
 \usage{
-bgschol_con(dataset = "cr_instant", path = NULL)
+bgschol_con(
+  project = "subugoe-collaborative",
+  dataset = "cr_instant",
+  path = NULL
+)
 }
 \arguments{
+\item{project}{Big Query project. Default is \code{subugoe-collaborative}.}
+
 \item{dataset}{big scholarly datasets. Currently the
-following datasets are availabe:
+following datasets are present in  \code{subugoe-collaborative}:
 \itemize{
 \item \emph{cr_instant} Most recent monthly Crossref metadata snapshot,
 comprising metadata about journal articles published since 2008.
 \item \emph{cr_history} Historic Crossref metadata snapshots starting Apr
 2018.
-\item \emph{oadoi_full} Unpaywall metadata since 2008.
+\item \emph{upw_instant} Most recent Unpaywall metadata since 2008.
+\item \emph{upw_history} Historic Unpaywall metadata.
+\item \emph{resources}: Authorative data like journal lists
 }}
 
 \item{path}{Path to JSON identifying the associated service account.}
 }
 \description{
-Authorization is only possible through a service account token.
-The toke can be requested from Najko
-\url{mailto:najko.jahn@sub.uni-goettingen.de}
+Interactive authorization or through a service account token.
 }
 \concept{connection}

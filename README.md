@@ -28,13 +28,12 @@ Connect to dataset with Crossref metadata snapshots
 ``` r
 library(bqschol)
 my_con <- bqschol::bgschol_con(
-  dataset = "cr_history",
-  path = "~/hoad-private-key.json")
+  dataset = "cr_history")
 ```
 
 Ideally you have a service account token stored as in a json to make use
 of this package. If not available, your Google account credentials will
-be requeste dvia the web browser.
+be requested via the web browser.
 
 ## Table functions
 
@@ -57,15 +56,13 @@ We can determine the top publisher by type as of April 2018. Note that
 we only stored Crossref records published later than 2007.
 
 ``` r
+library(dplyr)
 cr_instant_df <- bgschol_tbl(my_con, table = "cr_apr18")
 cr_instant_df %>%
     #top publishers
     dplyr::group_by(publisher) %>%
     dplyr::summarise(n = dplyr::n_distinct(doi)) %>%
     dplyr::arrange(desc(n)) 
-#> Complete
-#> Billed: 0 B
-#> Downloading 11 rows in 1 pages.
 #> # Source:     lazy query [?? x 2]
 #> # Database:   BigQueryConnection
 #> # Ordered by: desc(n)
@@ -102,9 +99,6 @@ ORDER BY
 LIMIT
   10")
 bgschol_query(my_con, cc_query)
-#> Complete
-#> Billed: 0 B
-#> Downloading 10 rows in 1 pages.
 #> # A tibble: 10 × 2
 #>    publisher                                 n
 #>    <chr>                                 <int>

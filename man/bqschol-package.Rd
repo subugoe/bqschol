@@ -6,14 +6,13 @@
 \alias{bqschol-package}
 \title{bqschol: Access and analyse SUB Göttingen Big Scholarly Data}
 \description{
-Database-specific package for various big scholarly 
-    data on Google BigQuery curated at the SUB Göttingen.
+Database-specific package for various big scholarly data on Google BigQuery curated at the SUB Göttingen.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/njahn82/bqschol}
-  \item Report bugs at \url{https://github.com/njahn82/bqschol/issues}
+  \item \url{https://github.com/subugoe/bqschol}
+  \item Report bugs at \url{https://github.com/subugoe/bqschol/issues}
 }
 
 }
